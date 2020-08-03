@@ -24,6 +24,7 @@
 #menu i {
     width:30px;
     text-align: center;
+    z-index:2222;
 }
 #menu a {
     color:white;
@@ -92,3 +93,43 @@
  #categorias:hover > div {
     height:85px;
  }
+ #galeria div {
+    overflow: hidden;
+    padding:5px;
+ }
+ #galeria img {
+    transform:scale(3);
+ }
+ #info {
+      padding:5px 15px;
+      border:2px solid grey;
+      background:white;
+      border-radius:100%;
+      z-index:2222;
+      position:absolute;
+      right:20px;
+      top:210px;
+      cursor:pointer;
+}
+#btnMapa {
+    padding:5px 10px;
+    border:2px solid grey;
+    background:white;
+    border-radius:100%;
+    z-index:2222;
+    position:absolute;
+    right:75px;
+    top:210px;
+    cursor:pointer;
+}
+#info i, #btnMapa i {
+    font-size:1.5rem; 
+}
+#info-puesto {
+    display:none;
+    color:#10789f;
+    padding:10px 0px;
+}
+#info-puesto i {
+    width:30px;
+}
