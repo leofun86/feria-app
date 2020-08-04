@@ -22,6 +22,7 @@ if (staff.length != 1) {
 
 btnInfo.addEventListener('click', ()=>{
     if (!boolInfo) {
+        mapa.style.display='none';
         infoPuesto.style.display='block';
         boolInfo=true;
     } else {
@@ -32,11 +33,24 @@ btnInfo.addEventListener('click', ()=>{
 
 btnMapa.addEventListener('click', ()=>{
     if (!boolMapa) {
+        infoPuesto.style.display='none';
         mapa.style.display='block';
         boolMapa=true;
     } else {
         mapa.style.display='none';
         boolMapa=false;
+    }
+});
+
+galeria_puesto.addEventListener('click', (e)=>{
+    if (e.target.className === 'fas fa-expand') {
+        img_fullscreen.querySelector('img').setAttribute('src', e.target.parentElement.querySelector('.img-fluid').src);
+        img_fullscreen.style.display='block';
+        contenedor_total.style.filter='blur(4px)';
+        document.getElementById('close-img-fullscreen').addEventListener('click', ()=>{
+            img_fullscreen.style.display='none';
+            contenedor_total.style.filter='blur(0px)';
+        });
     }
 })
 

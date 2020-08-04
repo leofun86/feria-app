@@ -1,3 +1,4 @@
+html, body { width:100%; height:100%; }
 #nav-top {
     display:flex;
     justify-content:space-between;
@@ -15,6 +16,7 @@
     opacity:0;
     box-shadow: 2px 2px 4px #222;
     z-index:2222;
+    display:none;
 }
 #menu h4 {
     color:white;
@@ -28,6 +30,7 @@
 }
 #menu a {
     color:white;
+    text-decoration: none;
 }
 
 .menu-in { animation: menuIn 0.3s forwards 0.1s; }
@@ -49,9 +52,23 @@
     background:orange;
     color:white;
     rotate: 0deg;
+    transform:scale(1);
+    position:relative;
+    left:10px;
 }
-.fav-giro-in { animation: rotateIn 0.5s forwards; }
-.fav-giro-out { animation: rotateOut 0.5s forwards; }
+.fav-giro-in { animation: pressIn 0.5s forwards; }
+.fav-giro-out { animation: pressOut 0.5s forwards; }
+
+@keyframes pressIn {
+    0%{transform:scale(1); background:orange; }
+    40%{transform:scale(1.15); }
+    100%{transform:scale(1.1); background:orangered; }
+}
+@keyframes pressOut {
+    0%{transform:scale(1.1); background:orangered; }
+    30%{transform:scale(1.15); background:orangered; }
+    100%{transform:scale(1); background:orange; }
+}
 
 @keyframes rotateIn {
     0% {rotate:360deg;background:orange; }
@@ -78,6 +95,7 @@
 
  #categorias i {
      font-size: 2rem;
+     width:50px;
  }
 
  #categorias div {
@@ -93,38 +111,37 @@
  #categorias:hover > div {
     height:85px;
  }
- #galeria div {
+ #galeria-puesto div {
     overflow: hidden;
     padding:5px;
  }
- #galeria img {
+ #galeria-puesto div div {
+     height:150px;
+ }
+ #galeria-puesto img {
     transform:scale(3);
  }
- #info {
-      padding:5px 15px;
-      border:2px solid grey;
-      background:white;
-      border-radius:100%;
+ #galeria-puesto i {
+     position:absolute;
+     z-index:2222;
+     font-size:2rem;
+     color:white;
+     text-shadow: 2px 2px 5px #222;
+     right:10px;
+     bottom:5px;
+     cursor:pointer;
+ }
+ #info, #btnMapa {
+      color:white;
+      text-shadow: 2px 2px 5px #222;
       z-index:2222;
       position:absolute;
-      right:20px;
-      top:210px;
+      bottom:15px;
       cursor:pointer;
 }
-#btnMapa {
-    padding:5px 10px;
-    border:2px solid grey;
-    background:white;
-    border-radius:100%;
-    z-index:2222;
-    position:absolute;
-    right:75px;
-    top:210px;
-    cursor:pointer;
-}
-#info i, #btnMapa i {
-    font-size:1.5rem; 
-}
+#info { right:20px; }
+#btnMapa { right:75px; }
+#info i, #btnMapa i { font-size:2rem; }
 #info-puesto {
     display:none;
     color:#10789f;
@@ -132,4 +149,36 @@
 }
 #info-puesto i {
     width:30px;
+}
+#container-img-sullscreen {
+    display:none;
+    position:fixed;
+    top:0px;
+    width:100%;
+    height:100%;
+    z-index:4444;
+    background:rgba(0, 0, 0, 0.5);
+}
+#container-img-sullscreen div {
+    width:100%; height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#container-img-sullscreen div button {
+    border:none;
+    background:orangered;
+    color:white;
+    width:40px;
+    height:40px;
+    border-radius:100%;
+    position:absolute;
+    top:10px;
+    right:20px;
+    font-weight: 600;
+}
+#container-img-sullscreen img {
+    border-top:2px solid #888;
+    border-bottom:2px solid #888;
 }
