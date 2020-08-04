@@ -55,9 +55,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
         } else {
             const link = document.createElement('a');
             const i = document.createElement('i');
+            const separador = document.createElement('div');
+            separador.style.backgroundColor='white';
+            separador.style.width='100%;';
+            separador.style.height='1px';
+            separador.style.margin='5px 0px';
             i.setAttribute('class', menu.i);
             link.setAttribute('href', menu.href);
-            link.innerHTML=`<i class="${menu.i}"></i>&nbsp;${menu.txt}<br>`;
+            link.innerHTML=`<i class="${menu.i}"></i>&nbsp;${menu.txt}`;
+            link.appendChild(separador);
             fragment.appendChild(link);
         }
     });
