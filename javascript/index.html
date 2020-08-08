@@ -14,6 +14,7 @@
     <script src="https://kit.fontawesome.com/3acfa00924.js" crossorigin="anonymous"></script>
     <!-- Script App -->
     <script src="js/app.js" defer></script>
+    <script src="js/registro.js" defer></script>
     <!-- Estilo App -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -65,6 +66,229 @@
         </div>
     </div>
     <div style="width:100%;height:100%;position:fixed;z-index:2222;">
+        <!-- MODAL LOGIN -->
+        <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="example-mercado-pulgas" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">LOGIN</h5>
+                  
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuario / Correo">
+                        </div>
+                        <div class="form-group">
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+                        </div>
+                        <button type="submit" class="btn w-100 btn-primary mb-2">Entrar</button>
+                        <div class="form-group">
+                            <div class="col text-center">
+                                <small>
+                                    ¿No tenés cuenta?
+                                    <br>
+                                    <h5 class="text-primary" data-dismiss="modal" aria-label="Close" data-toggle='modal' data-target='#modal-tipo' style="cursor:pointer;">Crear cuenta</h5>
+                                </small>
+                            </div>
+                        </div>
+                      </form>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- MODAL TIPO USUARIOS -->
+        <div class="modal fade" id="modal-tipo" tabindex="-1" role="dialog" aria-labelledby="example-mercado-pulgas" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">SELECCIONE UN TIPO</h5>
+                  
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn w-100 btn-info mb-2" data-dismiss="modal" aria-label="Close" data-toggle='modal' data-target='#modal-crear-cuenta-comprador'>Comprador</button>
+                    <button class="btn w-100 btn-warning" data-dismiss="modal" aria-label="Close" data-toggle='modal' data-target='#modal-crear-cuenta-comerciante'>Comerciante</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- MODAL CREAR CUENTA COMPRADOR -->
+        <div class="modal fade" id="modal-crear-cuenta-comprador" tabindex="-1" role="dialog" aria-labelledby="example-mercado-pulgas" aria-hidden="true">
+            <div class="modal-dialog" role="document" style=" overflow-y: initial !important;">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">CREAR CUENTA COMPRADOR</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" style="overflow-y: auto!important;height:380px;">
+                    <form id="formulario-registro">
+                        <label for="">Datos personales</label>
+                        <div class="form-row">
+                            <div class="col mb-3">
+                                <input type="text" class="form-control" id="reg_nombre" placeholder="Nombre" required>
+                            </div>
+                            <div class="col mb-3">
+                                <input type="text" class="form-control" id="reg_apellido" placeholder="Apellido" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col mb-3">
+                                <input type="text" class="form-control" id="reg_apellido" placeholder="celular (opcional)">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <select id="inputState" class="form-control" required>
+                                  <option selected>Seleccione su sexo</option>
+                                  <option value="hombre">Hombre</option>
+                                  <option value="mujer">Mujer</option>
+                                  <option value="otro">No especificar</option>
+                                </select>
+                            </div>
+                        </div>
+                        <label for="">Datos de ingreso</label>
+                        <div class="form-group">
+                            <div class="form-group col-md-6">
+                                <input type="email" class="form-control" id="reg_usuario" placeholder="Nombre de usuario" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                            <input type="email" class="form-control" id="reg_email" placeholder="Correo" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                            <input type="password" class="form-control" id="reg_password" placeholder="Contraseña" required>
+                            </div>
+                        </div>
+                        <label for="">Categorías de tu preferencia</label>
+                        <div class="form-group">
+                            <div class="form-group col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="plantas_animales" id="reg_check_plantas_animales">
+                                    <label class="form-check-label" for="reg_check_plantas_animales">
+                                        Plantas y animales
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="frutas_verduras" id="reg_check_frutas_verduras">
+                                    <label class="form-check-label" for="reg_check_frutas_verduras">
+                                        Frutas y verduras
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="anticuarios" id="reg_check_anticuarios">
+                                    <label class="form-check-label" for="reg_check_anticuarios">
+                                        Anticuarios
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="libros_revistas" id="reg_check_libros_revistas">
+                                    <label class="form-check-label" for="reg_check_libros_revistas">
+                                        Libros y revistas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="vestimenta" id="reg_check_vestimenta">
+                                    <label class="form-check-label" for="reg_check_vestimenta">
+                                        Vestimenta
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="mercado_pulgas" id="reg_check_mercado_pulgas">
+                                    <label class="form-check-label" for="reg_check_mercado_pulgas">
+                                        Mercado de pulgas
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success w-100">Crear cuenta</button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- MODAL CREAR CUENTA COMERCIANTE -->
+        <div class="modal fade" id="modal-crear-cuenta-comerciante" tabindex="-1" role="dialog" aria-labelledby="example-mercado-pulgas" aria-hidden="true">
+            <div class="modal-dialog" role="document" style=" overflow-y: initial !important;">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">CREAR CUENTA COMERCIANTE</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="form_registro" style="overflow-y: auto!important;height:380px;">
+                    <form id="formulario-registro">
+                        <label for="">Datos personales</label>
+                        <div class="form-row">
+                            <div class="col mb-3">
+                                <input type="text" class="form-control" id="reg_nombre" placeholder="Nombre" value="hola">
+                            </div>
+                            <div class="col mb-3">
+                                <input type="text" class="form-control" id="reg_apellido" placeholder="Apellido">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="email" class="form-control" id="reg_correo" placeholder="Correo">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <select id="reg_sexo" class="form-control">
+                                  <option selected>Seleccione su sexo</option>
+                                  <option value="hombre">Hombre</option>
+                                  <option value="mujer">Mujer</option>
+                                  <option value="indefinido">No especificar</option>
+                                </select>
+                            </div>
+                            <div class="col mb-3">
+                                <input type="text" class="form-control" id="reg_celular" placeholder="celular (opcional)">
+                            </div>
+                        </div>
+                        <label for="">Datos de ingreso</label>
+                        <div class="form-group">
+                            <div class="form-group col-md-6">
+                                <input type="txt" class="form-control" id="reg_cedula" placeholder="Cédula de identidad">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="password" class="form-control" id="reg_password" placeholder="Contraseña">
+                            </div>
+                        </div>
+                        <label for="">Datos de puesto</label>
+                        <div class="form-row">
+                            <div class="col mb-3">
+                                <input type="text" class="form-control" id="reg_calle" placeholder="Calle" >
+                            </div>
+                            <div class="col mb-3">
+                                <input type="text" class="form-control" id="reg_numero_calle" placeholder="Número">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <select id="reg_categoria" class="form-control mb-2">
+                                  <option selected>Rubro</option>
+                                  <option value="plantas_animales">Plantas y animales</option>
+                                  <option value="frutas_verduras">Frutas y verduras</option>
+                                  <option value="anticuarios">Anticuarios</option>
+                                  <option value="libros_revistas">Libros y revistas</option>
+                                  <option value="vestimenta">Vestimenta</option>
+                                  <option value="mercado_pulgas">Mercado de pulgas</option>
+                                </select>
+                                <select id="reg_sub_categoria" style="display:none;" class="form-control"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button id="btn_envio" class="btn btn-success w-100">Crear cuenta</button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- MODAL CATEGORÍAS -->
         <div class="modal fade" id="example-mercado-pulgas" tabindex="-1" role="dialog" aria-labelledby="example-mercado-pulgas" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -83,10 +307,13 @@
                 </div>
               </div>
             </div>
-          </div>
+        </div>
     </div>
-    <h3 class="text-center my-2">Explorá la feria</h3>
-    <img src="assets/mapa-img.jpg" class="img-fluid mt-3" id="mapa" alt="Imagen de la feria de Tristán Narvaja">
+    <!--
+        <h3 class="text-center my-2">Explorá la feria</h3>
+        <img src="assets/mapa-img.jpg" class="img-fluid mt-3" id="mapa" alt="Imagen de la feria de Tristán Narvaja">
+    -->
+    <br>
     <footer id="pie" class="bg-info text-light text-center py-2">
         Feria Tristán Narvaja © 2020
     </footer>

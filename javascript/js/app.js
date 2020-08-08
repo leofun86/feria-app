@@ -62,6 +62,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
             separador.style.margin='5px 0px';
             i.setAttribute('class', menu.i);
             link.setAttribute('href', menu.href);
+            if (menu.txt === 'LOGIN') {
+                link.setAttribute('data-toggle', 'modal');
+                link.setAttribute('data-target', '#modal-login');
+            }
             link.innerHTML=`<i class="${menu.i}"></i>&nbsp;${menu.txt}`;
             link.appendChild(separador);
             fragment.appendChild(link);

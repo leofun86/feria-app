@@ -96,6 +96,7 @@ html, body { width:100%; height:100%; }
  #categorias i {
      font-size: 2rem;
      width:50px;
+     margin-right:5px;
  }
 
  #categorias div {
