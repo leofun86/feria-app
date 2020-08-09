@@ -23,16 +23,18 @@
         <a class="navbar-brand mt-2" id="icono-menu" href="#">
             <i class="fas fa-store-alt"></i>
         </a>
-        <form class="form-inline mt-3 mb-2 my-lg-0" style="display:inline-block;">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Buscar producto...">
-            <span class="input-group-btn">
-                <button class="btn btn-info" type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-            </span>
-        </div>
-        </form>
+        <!--
+            <form class="form-inline mt-3 mb-2 my-lg-0" style="display:inline-block;">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Buscar producto...">
+                <span class="input-group-btn">
+                    <button class="btn btn-info" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+            </form>
+        -->
     </nav>
     <div class="container-fluid"><div id="menu"></div></div>
     <img src="assets/portada.jpg" class="img-fluid" alt="Imagen de la feria de Tristán Narvaja">
@@ -112,102 +114,40 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                    <button class="btn w-100 btn-info mb-2" data-dismiss="modal" aria-label="Close" data-toggle='modal' data-target='#modal-crear-cuenta-comprador'>Comprador</button>
+                    <button class="btn w-100 btn-info mb-2" data-dismiss="modal" aria-label="Close" data-toggle='modal' data-target='#modal-crear-cuenta-comprador' disabled>Visitante</button>
                     <button class="btn w-100 btn-warning" data-dismiss="modal" aria-label="Close" data-toggle='modal' data-target='#modal-crear-cuenta-comerciante'>Comerciante</button>
                 </div>
               </div>
             </div>
         </div>
-        <!-- MODAL CREAR CUENTA COMPRADOR -->
+        <!-- MODAL CREAR CUENTA VISITANTE -->
         <div class="modal fade" id="modal-crear-cuenta-comprador" tabindex="-1" role="dialog" aria-labelledby="example-mercado-pulgas" aria-hidden="true">
             <div class="modal-dialog" role="document" style=" overflow-y: initial !important;">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">CREAR CUENTA COMPRADOR</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">CREAR CUENTA VISITANTE</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body" style="overflow-y: auto!important;height:380px;">
-                    <form id="formulario-registro">
-                        <label for="">Datos personales</label>
-                        <div class="form-row">
-                            <div class="col mb-3">
-                                <input type="text" class="form-control" id="reg_nombre" placeholder="Nombre" required>
-                            </div>
-                            <div class="col mb-3">
-                                <input type="text" class="form-control" id="reg_apellido" placeholder="Apellido" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col mb-3">
-                                <input type="text" class="form-control" id="reg_apellido" placeholder="celular (opcional)">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <select id="inputState" class="form-control" required>
-                                  <option selected>Seleccione su sexo</option>
-                                  <option value="hombre">Hombre</option>
-                                  <option value="mujer">Mujer</option>
-                                  <option value="otro">No especificar</option>
-                                </select>
-                            </div>
-                        </div>
-                        <label for="">Datos de ingreso</label>
-                        <div class="form-group">
-                            <div class="form-group col-md-6">
-                                <input type="email" class="form-control" id="reg_usuario" placeholder="Nombre de usuario" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                            <input type="email" class="form-control" id="reg_email" placeholder="Correo" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                            <input type="password" class="form-control" id="reg_password" placeholder="Contraseña" required>
-                            </div>
-                        </div>
-                        <label for="">Categorías de tu preferencia</label>
-                        <div class="form-group">
-                            <div class="form-group col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="plantas_animales" id="reg_check_plantas_animales">
-                                    <label class="form-check-label" for="reg_check_plantas_animales">
-                                        Plantas y animales
-                                    </label>
+                    <form id="formulario-registro-visitante">
+                        <!--
+                            <div class="form-group">
+                                <div class="form-group col-md-6">
+                                    <input type="txt" maxlength="8" minlength="8" class="form-control" id="reg_documento" placeholder="Documento" required>
+                                    <small id="alert_documento"></small>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="frutas_verduras" id="reg_check_frutas_verduras">
-                                    <label class="form-check-label" for="reg_check_frutas_verduras">
-                                        Frutas y verduras
-                                    </label>
+                                <div class="form-group col-md-6" required>
+                                    <input type="email" class="form-control" id="reg_correo" placeholder="Correo">
+                                    <small id="alert_email"></small>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="anticuarios" id="reg_check_anticuarios">
-                                    <label class="form-check-label" for="reg_check_anticuarios">
-                                        Anticuarios
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="libros_revistas" id="reg_check_libros_revistas">
-                                    <label class="form-check-label" for="reg_check_libros_revistas">
-                                        Libros y revistas
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="vestimenta" id="reg_check_vestimenta">
-                                    <label class="form-check-label" for="reg_check_vestimenta">
-                                        Vestimenta
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="mercado_pulgas" id="reg_check_mercado_pulgas">
-                                    <label class="form-check-label" for="reg_check_mercado_pulgas">
-                                        Mercado de pulgas
-                                    </label>
+                                <div class="form-group col-md-6">
+                                    <input type="password" minlength="8" maxlength="16" class="form-control" id="reg_password" placeholder="Contraseña" required>
+                                    <small>Mínimo 8 caracteres, máximo 16 catacteres.</small>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-success w-100">Crear cuenta</button>
-                        </div>
+                        -->
                     </form>
                 </div>
               </div>
@@ -223,65 +163,93 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body" id="form_registro" style="overflow-y: auto!important;height:380px;">
-                    <form id="formulario-registro">
-                        <label for="">Datos personales</label>
-                        <div class="form-row">
-                            <div class="col mb-3">
-                                <input type="text" class="form-control" id="reg_nombre" placeholder="Nombre" value="hola">
+                <div class="modal-body" id="form_registro" style="overflow-y: auto!important;">
+                    <form id="formulario-registro-comerciante">
+                        <!--
+                            <label for="">Datos personales</label>
+                            <div class="form-row">
+                                <div class="col mb-3">
+                                    <input type="text" class="form-control" id="reg_nombre" placeholder="Nombre" required>
+                                </div>
+                                <div class="col mb-3">
+                                    <input type="text" class="form-control" id="reg_apellido" placeholder="Apellido" required>
+                                </div>
                             </div>
-                            <div class="col mb-3">
-                                <input type="text" class="form-control" id="reg_apellido" placeholder="Apellido">
+                            <div class="form-row">
+                                <div class="form-group col-md-6" required>
+                                    <input type="email" class="form-control" id="reg_correo" placeholder="Correo">
+                                    <small id="alert_email"></small>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <select id="reg_sexo" class="form-control" required>
+                                    <option selected>Seleccione su sexo</option>
+                                    <option value="hombre">Hombre</option>
+                                    <option value="mujer">Mujer</option>
+                                    <option value="indefinido">No especificar</option>
+                                    </select>
+                                </div>
+                                <div class="col mb-3">
+                                    <input type="text" class="form-control" id="reg_celular" placeholder="celular (opcional)">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <input type="email" class="form-control" id="reg_correo" placeholder="Correo">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <select id="reg_sexo" class="form-control">
-                                  <option selected>Seleccione su sexo</option>
-                                  <option value="hombre">Hombre</option>
-                                  <option value="mujer">Mujer</option>
-                                  <option value="indefinido">No especificar</option>
-                                </select>
-                            </div>
-                            <div class="col mb-3">
-                                <input type="text" class="form-control" id="reg_celular" placeholder="celular (opcional)">
-                            </div>
-                        </div>
                         <label for="">Datos de ingreso</label>
+                        -->
                         <div class="form-group">
                             <div class="form-group col-md-6">
-                                <input type="txt" class="form-control" id="reg_cedula" placeholder="Cédula de identidad">
+                                <input type="txt" maxlength="8" minlength="8" class="form-control" id="reg_documento" placeholder="Documento" required>
+                                <small id="alert_documento"></small>
+                            </div>
+                            <div class="form-group col-md-6" required>
+                                <input type="email" class="form-control" id="reg_correo" placeholder="Correo">
+                                <small id="alert_email"></small>
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="password" class="form-control" id="reg_password" placeholder="Contraseña">
+                                <input type="password" minlength="8" maxlength="16" class="form-control" id="reg_password" placeholder="Contraseña" required>
+                                <small>Mínimo 8 caracteres, máximo 16 catacteres.</small>
                             </div>
                         </div>
-                        <label for="">Datos de puesto</label>
-                        <div class="form-row">
-                            <div class="col mb-3">
-                                <input type="text" class="form-control" id="reg_calle" placeholder="Calle" >
-                            </div>
-                            <div class="col mb-3">
-                                <input type="text" class="form-control" id="reg_numero_calle" placeholder="Número">
+                        <!--
+                            <label for="">Datos de puesto</label>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" id="reg_nombre_puesto" placeholder="Nombre de puesto, ej: Verduras Tristán" required>
+                                </div>
                             </div>
                             <div class="form-group col-md-4">
-                                <select id="reg_categoria" class="form-control mb-2">
-                                  <option selected>Rubro</option>
-                                  <option value="plantas_animales">Plantas y animales</option>
-                                  <option value="frutas_verduras">Frutas y verduras</option>
-                                  <option value="anticuarios">Anticuarios</option>
-                                  <option value="libros_revistas">Libros y revistas</option>
-                                  <option value="vestimenta">Vestimenta</option>
-                                  <option value="mercado_pulgas">Mercado de pulgas</option>
+                                <select id="reg_tipo" class="form-control mb-2" required>
+                                <option selected>Tipo de comercio</option>
+                                <option value="local">Local</option>
+                                <option value="puesto">Puesto</option>
                                 </select>
-                                <select id="reg_sub_categoria" style="display:none;" class="form-control"></select>
                             </div>
-                        </div>
+                            <div class="form-row">
+                                <div class="col mb-3">
+                                    <input type="text" class="form-control" id="reg_calle" placeholder="Calle" required>
+                                </div>
+                                <div class="col mb-3">
+                                    <input type="text" class="form-control" id="reg_numero" placeholder="Número" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col mb-3">
+                                    <input type="text" class="form-control" id="reg_extra_calle" placeholder="Detalle (opcional), ej: entre Colonia y Mercedes" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <select id="reg_categoria" class="form-control mb-2" required>
+                                    <option selected>Rubro</option>
+                                    <option value="plantas_animales">Plantas y animales</option>
+                                    <option value="frutas_verduras">Frutas y verduras</option>
+                                    <option value="anticuarios">Anticuarios</option>
+                                    <option value="libros_revistas">Libros y revistas</option>
+                                    <option value="vestimenta">Vestimenta</option>
+                                    <option value="mercado_pulgas">Mercado de pulgas</option>
+                                    </select>
+                                    <select id="reg_sub_categoria" style="display:none;" class="form-control" required></select>
+                                </div>
+                            </div>
+                        -->
                         <div class="form-group">
-                            <button id="btn_envio" class="btn btn-success w-100">Crear cuenta</button>
+                            <input type="submit" id="btn_envio" class="btn btn-success w-100" value="Crear cuenta" disabled>
                         </div>
                     </form>
                 </div>
