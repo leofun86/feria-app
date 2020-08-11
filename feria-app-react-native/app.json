@@ -1,0 +1,12 @@
+{
+  "name": "feria-app-native",
+  "displayName": "feria-app-react-native",
+  "expo": {
+    "name": "feria-app-react-native",
+    "slug": "feria-app-react-native",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
