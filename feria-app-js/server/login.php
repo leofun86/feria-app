@@ -1,22 +1,35 @@
 <?php
-    require '../conexion.php';
-    
-    if (isset($_GET['ci'])) { $ci=$_POST['email']; }
-    if (isset($_GET['mail'])) { $mail=$_POST['passwrod']; }
-    
-    $mysqli->set_charset('utf8');
-    
-    switch($op) {
-    case 1:
-        $new_request=$mysqli->prepare("SELECT ci FROM clientes where ci=$ci");
-    break;
-    case 2:
-        $new_request=$mysqli->prepare("SELECT correo FROM clientes where correo='".$mail."'");
-    break;
-    }
-    $new_request->execute();
-    $result = $new_request->get_result();
-    if ($result->num_rows == 1) { echo 1; } else { echo 0; }
-    $new_request->close();
-    $mysqli->close();
+    //if (isset($_GET['tipo'])) {
+        header('Access-Control-Allow-Origin: *');
+        require 'conexion.php';
+        
+        //$tipo=$_GET['tipo'];
+        $correo = $_POST['correo'];
+        $password = $_POST['password'];
+        
+        echo $tipo;
+        echo $correo;
+        echo $password;
+
+        //$mysqli->set_charset('utf8');
+        
+        /*switch($tipo) {
+        case 'comerciante':
+            
+        break;
+        case 'visitante':
+            $new_request=$mysqli->prepare("SELECT correo FROM visitante where correo='".$mail."'");
+        break;
+        }*/
+        $sql="SELECT * FROM comerciante WHERE correo='".$correo."' AND contrasenia='".$password."'";
+        $result = $mysqli->query($sql);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo json_encode('error');
+            }
+        } else {
+            echo json_encode('Correcto: Chaucha');
+        }
+        $mysqli->close();
+    //}
 ?>

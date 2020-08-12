@@ -195,7 +195,6 @@ form_registro_comerciante.addEventListener('submit', (e)=>{
             */
     };
 
-    console.log(data);
     fetch(url, {
         method: 'POST',
         body: JSON.stringify(data),

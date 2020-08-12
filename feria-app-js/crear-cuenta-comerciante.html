@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feria App v0.1</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" sizes="64x64">
+    <!-- Bootstrap & JQuery-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous" defer></script>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/3acfa00924.js" crossorigin="anonymous"></script>
+    <!-- Script App -->
+    <script src="js/app.js" defer></script>
+    <script src="js/registro.js" defer></script>
+    <!-- Estilo App -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class=" py-3 pl-3 mb-4 bg-info text-center text-white" style="font-size:25px;">
+        <a href="index.html" class="text-white">
+            <i class="fas fa-chevron-left" style="position:absolute; left:10px;"></i>
+        </a>
+        <i class="fas fa-store-alt"></i> Feria Tristán
+    </nav>
+    <div class="container-fluid"></div>
+    <h5 class="text-center">CREAR CUENTA</h5>
+    <h6 class="text-center mb-3">Comerciante</h6>
+        <form id="formulario-registro-comerciante" class="d-flex flex-column justify-content-center">
+            <div class="form-group">
+                <div class="form-group col-md-6">
+                    <input type="txt" maxlength="8" minlength="8" class="form-control" id="reg_documento" placeholder="Documento" required>
+                    <small id="alert_documento"></small>
+                </div>
+                <div class="form-group col-md-6" required>
+                    <input type="email" class="form-control" id="reg_correo" placeholder="Correo">
+                    <small id="alert_email"></small>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="password" minlength="8" maxlength="16" class="form-control" id="reg_password" placeholder="Contraseña" required>
+                    <small style="color:#666;">Mínimo 8 caracteres, máximo 16 catacteres.</small>
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <input type="submit" id="btn_envio" class="btn btn-success w-75" value="Crear cuenta" disabled>
+            </div>
+        </form>
+    <br>
+    <footer id="pie" class="bg-info text-light text-center py-2">
+        Feria Tristán Narvaja © 2020
+    </footer>
+</body>
+</html>

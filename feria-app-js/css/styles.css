@@ -183,3 +183,8 @@ html, body { width:100%; height:100%; }
     border-top:2px solid #888;
     border-bottom:2px solid #888;
 }
+ #pie {
+     width:100%;
+     position:absolute;
+     bottom:0px;
+ }
