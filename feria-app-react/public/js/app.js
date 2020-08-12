@@ -14,7 +14,7 @@ favicon.addEventListener('click', ()=> {
         favicon.classList.add('fav-giro-out');
         menu.classList.remove('menu-in');
         menu.classList.add('menu-out');
-        setTimeout(()=>{ menu.style.display='none'; }, 1500);
+        setTimeout(()=>{ menu.style.display='none'; }, 500);
         giroBool=false;
     }  
 });
