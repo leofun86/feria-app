@@ -1,6 +1,12 @@
-plantas y animales #58b300 
-frutas y verduras #621376
-anticuarios #f0b500
-libros y revistas #50c4b8
-vestimenta #eb9d00
-mercado de pulgas #2d2d76
+plantas y animales 		#58b300
+alimentos y bebidas 		#621376
+baños y cocina 			#f0b500
+libros y revistas 		#50c4b8
+vestimenta 			#eb9d00
+electrónica y entretenimiento	#ff0000		
+anticuarios			#b5843e
+bazar				#b6a91d
+bricolage			#3164c2
+papelería			#efdfb4
+repuestos			#888
+mercado de pulgas 		#2d2d76
