@@ -4,7 +4,7 @@ import { Button, Menu, Divider, Provider } from 'react-native-paper';
 import BootstrapStyleSheet from 'react-native-bootstrap-styles';
 import { Styles } from '../styles.js';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faStoreAlt, fasHome, faUser } from '@fortawesome/free-solid-svg-icons';
+import * as fa from '@fortawesome/free-solid-svg-icons';
 
 const
   BODY_COLOR = '#000022',
@@ -45,35 +45,7 @@ const MenuScreen = () => {
                     anchor={
                         <Text>
                             <Button onPress={openMenu}>
-                                <FontAwesomeIcon icon={faStoreAlt} size={40} style={Styles.favicon} />
-                            </Button>
-                        </Text>
-                    }>
-                    <Menu.Item
-                      icon="bus"
-                      onPress={() => {}} title="Cómo llegar" />
-                    <Divider />
-                    <Menu.Item
-                      icon="store"
-                      onPress={() => navigate('Details')} title="Paseo de la Feria" />
-                    <Divider />
-                    <Menu.Item
-                      icon="book-open-page-variant"
-                      onPress={() => {}} title="Wiki-Feria" />
-                    <Divider />
-                    <Menu.Item
-                      icon="cloud-download"
-                      onPress={() => {}} title="Descargas" />
-                </Menu>
-
-                <Menu
-                    style={[Styles.menu]}
-                    visible={visible}
-                    onDismiss={closeMenu}
-                    anchor={
-                        <Text>
-                            <Button onPress={openMenu}>
-                                <FontAwesomeIcon icon={faStoreAlt} size={40} style={Styles.favicon} />
+                                <FontAwesomeIcon icon={fa.faBars} size={30} style={Styles.favicon} />
                             </Button>
                         </Text>
                     }>
@@ -98,7 +70,7 @@ const MenuScreen = () => {
       </Provider>
     );
   };
-  
+
   export default MenuScreen;
 
 /*

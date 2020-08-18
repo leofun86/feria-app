@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { View, ScrollView, Image  } from 'react-native';
 import { BottomNavigation, Text } from 'react-native-paper';
-import HeaderMenu from './headerMenu.js';
-import { Styles } from './../styles.js';
-import Main from './../paginas/main/main.js';
+import HeaderMenu from './Main_Header_Menu.js';
+import { Styles } from '../styles.js';
+import Contenido from '../paginas/main/contenido.js';
 
 
 
@@ -20,7 +20,7 @@ const FooterMenu = () => {
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
-    inicio: Main,
+    inicio: Contenido,
     favoritos: AlbumsRoute,
     mapa: RecentsRoute,
   });

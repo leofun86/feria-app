@@ -6,7 +6,7 @@ export const Styles = StyleSheet.create({
         backgroundColor: '#14a4bc',
         paddingTop: 5,
         paddingBottom: 2,
-        paddingLeft: 15,
+        paddingLeft: 5,
         display:'block',
     },
     menu: {
@@ -43,18 +43,48 @@ export const Styles = StyleSheet.create({
         width:'100%',
         paddingTop:0,
         paddingBottom:10,
+        paddingLeft:30,
+        paddingRight:30
     },
     lista_categoria:{
-        backgroundColor:'orange',
         color:'#fff',
         paddingTop:0,
-        paddingBottom:0
+        paddingBottom:0,
+        borderRadius:10,
+        marginBottom:5,
+    },
+    caja_list_item: {
+      paddingLeft:0,
+      paddingBottom:10,
+    },
+    item_style_categoria: {
+      paddingTop:0,
+      paddingBottom:0,
+    },
+    item_titleStyle_categoria: {
+      marginTop:0,
+      marginBottom:0,
+      color:'#888',
+    },
+    item_icon: {
+      height:20,
+    },
+    icono_categoria: {
+      color:'#a7d5dc',
+      position:'relative',
+      top:0,
+      marginRight:6,
     },
     subtitulo_categorias: {
-        paddingTop:10,
-        paddingBottom:10,
-        backgroundColor:'#ddd',
-        color:'#888',
+        width:'50%',
+        borderRadius:5,
+        paddingLeft:15,
+        paddingTop:5,
+        paddingBottom:5,
+        color:'#83c5d0',
+        fontWeight:700,
+        //backgroundColor:'#ddd',
+        //color:'#888',
     }
   });
 
