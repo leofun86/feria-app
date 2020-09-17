@@ -2,41 +2,42 @@
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="container-fluid" id="cajaMenuVer">
         <div class="row">
-          <div id="menu-caja-1" class="col-4 text-white p-0" style="background:brown;">
-            <video muted pause>
-              <source src="./assets/video/main.m4v">
+          <div id="menu-caja-1" class="col-4 text-white p-0">
+            <div style="z-index:-1;position:absolute;width:100%;height:100%;top:0px;left:0px;background-color:rgba(112, 68, 43, 0.6);"></div>
+            <video muted pause loop>
+              <source src="./assets/video/menu_caja_1.m4v">
             </video>
             <p class="titulo-caja-menu py-1 text-center">Menu</p>
             <div class="px-5">
-              <h6><a href="./main.html">INICIO</a></h6>
-              <h6 id="btnComoLlegar"><a href="#">CÓMO LLEGAR</a></h6>
-              <h6><a href="#">QUIENES SOMOS</a></h6>
-              <h6><a href="#">CONTACTO</a></h6>
+              <h5 id="btnInicio"><a href="#">INICIO</a></h5>
+              <h5 id="btnComoLlegar"><a href="#">CÓMO LLEGAR</a></h5>
+              <h5 id="btnQuienesSomos"><a href="#">QUIENES SOMOS</a></h5>
+              <h5 id="btnContacto"><a href="#">CONTACTO</a></h5>
             </div>
           </div>
-          <div id="menu-caja-2" class="col-8 text-center text-white p-0" style="background:blue;">
-            <video muted pause>
-              <source src="./assets/video/main.m4v">
+          <div id="menu-caja-2" class="col-8 text-center text-white p-0">
+            <div style="z-index:-1;position:absolute;width:100%;height:100%;top:0px;left:0px;background-color:rgba(43, 73, 112, 0.6);"></div>
+            <video muted loop pause>
+              <source src="./assets/video/menu_caja_2.m4v">
             </video>
             <p class="titulo-caja-menu py-1 text-center">Paseo de la Feria</p>
           
               <div class="px-3 pb-3" style="color:#444;">
-                <div style="width:25%;padding:30px 0px;background:white;display:inline-block;margin:2px;">
+                <a href="#">
                   Librería
-                </div>
-
-                <div style="width:25%;padding:30px 0px;background:white;display:inline-block;margin:2px;">
+                </a>
+                <a href="#">
                   Mercado de Pulgas
-                </div>
-                <div style="width:25%;padding:30px 0px;background:white;display:inline-block;margin:2px;">
+                </a>
+                <a href="#">
                   Frutas y Verduras
-                </div>
-                <div style="width:25%;padding:30px 0px;background:white;display:inline-block;margin:2px;">
+                </a>
+                <a href="#">
                   Comida de paso
-                </div>
-                <div style="width:25%;padding:30px 0px;background:white;display:inline-block;margin:2px;">
+                </a>
+                <a href="#">
                   Artistas callejeros
-                </div>
+                </a>
               </div>
               <!--
                 <h5>Gastronomía</h5>
@@ -75,10 +76,10 @@
         </div>
       </div>
     </div>
-    <nav class="navbar navbar-dark" style="justify-content:left!important;z-index:2222;background:white;">
+    <nav class="navbar navbar-dark" style="border-bottom:1px solid #ccc;justify-content:left!important;z-index:2222;background:white;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" style="outline:none;">
         <i class="fas fa-bars" style="color:black;font-size:2rem;"></i>
       </button>
-      <img src="./assets/img/logo_feria.png" style="width:12rem;" alt="">
+      <img src="./assets/img/logo_navbar.png" style="margin-left:15px;width:8rem;" alt="">
     </nav>
   </div>

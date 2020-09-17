@@ -1,27 +1,50 @@
 <script src="./assets/js/como_llegar.js" defer></script>
 
-<div class="container-fluid" style="height:100%;" id="mainComoLlegar">
+<div class="container-fluid" style="height:100%;background:white;" id="mainComoLlegar">
     <div class="row" style="height:100%;">
-        <div class="col-5">
-            <h1>¿Cómo llegar a la Feria de Tristán Narvaja en Ómnibus?</h1>
+        <div class="col-12 col-lg-5 px-4 py-4">
+            <h1>¿Cómo llegar a la Feria de Tristán Narvaja?</h1>
+            <!--<p>
+                Pulsá en la línea de Ómnibus para ver indicaciones paso a paso con mapas, tiempos de llegada del ómnibus y horarios actualizados.
+            </p>-->
+            <hr>
             <p>
-                Pulsa en la ruta de Ómnibus para ver indicaciones paso a paso con mapas, tiempos de llegada de línea y horarios actualizados.
-            </p>
-            <p>
-                <h2 id="busD10">D10</h2>
-                Desde Movie, Montevideo 38 min
-                <h2 id="bus494">494</h2>
-                Desde Universidad ORT - Campus Av Uruguay, Montevideo 10 min
-                <h2 id="bus137">137</h2>
-                Desde Palermo, Montevideo 13 min
-                <h2 id="bus128">128</h2>
-                Desde Rambla Pocitos 20 min
-                <h2 id="bus121">121</h2>
-                Desde Wasabi Marketing Digital, Montevideo 17 min
+                <h2 id="busD10">
+                    <i class="fas fa-bus-alt"></i>
+                    D10 <span><i class="fas fa-map-marked-alt"></i></span>
+                </h2>
+                <span>Desde Movie, Montevideo 38 min</span>
+                
+                <h2 id="bus494">
+                    <i class="fas fa-bus-alt"></i>
+                    494 <span><i class="fas fa-map-marked-alt"></i></span>
+                </h2>
+                <span>Desde Universidad ORT - Campus Av Uruguay, Montevideo 10 min</span>
+                <h2 id="bus137">
+                    <i class="fas fa-bus-alt"></i>
+                    137 <span><i class="fas fa-map-marked-alt"></i></span>
+                </h2>
+                <span>Desde Palermo, Montevideo 13 min</span>
+                <h2 id="bus128">
+                    <i class="fas fa-bus-alt"></i>
+                    128 <span><i class="fas fa-map-marked-alt"></i></span>
+                </h2>
+                <span>Desde Rambla Pocitos 20 min</span>
+                
+                <h2 id="bus121">
+                    <i class="fas fa-bus-alt"></i>
+                    121 <span><i class="fas fa-map-marked-alt"></i></span>
+                </h2>
+                <span>Desde Wasabi Marketing Digital, Montevideo 17 min</span>
             </p>
         </div>
-        <div class="col-7" style="width:100%;height:100%!important;">
-            <iframe id="mapaBuses" style="width:100%;height:100%!important;" frameborder="0" src=""></iframe>
+        <div class="col-7 d-none d-lg-block" style="width:100%;height:100%!important;background-image:url('./assets/img/como_llegar.jpg');background-size:cover;background-repeat:no-repeat;">
+            
+        </div>
+        <div style="position:absolute; width:100%;height:100%; display:none;padding:20px;background-color:rgba(0,0,0,0.5);">
+            <a href="#" id="btnCerrarMapa" class="btn text-white" style="position:absolute;font-weight:900;font-size:2rem;text-shadow:0px 0px 10px #222;background:rgb(28, 56, 114);padding:5px 20px;border-radius:100%;top:10px;right:10px;box-shadow:2px 2px 5px #222;"><b>X</b></a>
+            <iframe id="mapaBuses" style="width:100%;height:100%!important;background:white;" frameborder="0" src="">
+            </iframe>
         </div>
         <!--
             <div class="mv-gd-widget-20"
