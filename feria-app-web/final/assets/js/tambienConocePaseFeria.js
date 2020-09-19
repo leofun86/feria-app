@@ -13,7 +13,6 @@ function tambienConoceVideos() {
 }
 function linkPaginas() {
     const enlaces = document.querySelectorAll('.cajaVideo a');
-    const cajaVideo = document.querySelectorAll('.cajaVideo');
     const cajaPaginas = document.getElementById('cajaPaginas');
     enlaces.forEach(link => {
         link.addEventListener('click', (e)=>{
@@ -24,16 +23,19 @@ function linkPaginas() {
             cajaPaginas.style.background='white';
             switch(link.textContent) {
                 case "Librería":
-                    $(cajaPaginas).load('./paginas/paseoFeria/librerias.html');
+                    $(cajaPaginas).load('./paginas/proximamente.html');
                 break;
                 case "Mercado de Pulgas":
+                    $(cajaPaginas).load('./paginas/proximamente.html');
                 break;
                 case "Frutas y Verduras":
+                    $(cajaPaginas).load('./paginas/proximamente.html');
                 break;
                 case "Comida de Paso":
                     $(cajaPaginas).load('./paginas/paseoFeria/comida_paso.html');
                 break;
                 case "Artistas Callejeros":
+                    $(cajaPaginas).load('./paginas/proximamente.html');
                 break;
             }
         });

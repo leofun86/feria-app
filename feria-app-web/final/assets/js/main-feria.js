@@ -89,8 +89,10 @@ function cargaMenu() {
                     $(cajaPaginas).load('./paginas/como_llegar.html');
                 break;
                 case "QUIENES SOMOS":
+                    $(cajaPaginas).load('./paginas/proximamente.html');
                 break;
                 case "CONTACTO":
+                    $(cajaPaginas).load('./paginas/proximamente.html');
                 break;
             }
             $(cajaMainMenu).slideToggle();
@@ -104,15 +106,19 @@ function cargaMenu() {
             cajaPaginas.style.background='white';
             switch (btn.textContent) {
                 case "Librería":
+                    $(cajaPaginas).load('./paginas/proximamente.html');
                 break;
                 case "Mercado de Pulgas":
+                    $(cajaPaginas).load('./paginas/proximamente.html');
                 break;
                 case "Frutas y Verduras":
+                    $(cajaPaginas).load('./paginas/proximamente.html');
                 break;
                 case "Comida de paso":
                     $(cajaPaginas).load('./paginas/paseoFeria/comida_paso.html');
                 break;
                 case "Artistas callejeros":
+                    $(cajaPaginas).load('./paginas/proximamente.html');
                 break;
             }
             $(cajaMainMenu).slideToggle();

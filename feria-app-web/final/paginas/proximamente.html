@@ -1,0 +1,21 @@
+<script src="./assets/js/pagPaseoFeria.js" defer></script>
+<div class="container-fluid bg-white" id="cajaProximamente" style="padding:0px;margin:0px;height:100%;display:flex;flex-direction: column;align-items:center;justify-content:center;">
+    <img src="./assets/img/techitos.png" style="width:10rem;opacity:0.8;">
+    <h3>¡Próximamente!</h3>
+    <a href="#" class="btn btn-info">Volver</a>
+</div>
+<script>
+    function proximamente() {
+        const btnProx = document.querySelector('#cajaProximamente a');
+        btnProx.addEventListener('click', (e)=>{
+            e.preventDefault();
+            const cajaPaginas = document.getElementById('cajaPaginas');
+            cajaPaginas.innerHTML="";
+            cajaPaginas.style.width="100%";
+            cajaPaginas.style.height="100%";
+            cajaPaginas.style.background='white';
+            $(cajaPaginas).load('./paginas/main.html');
+        });
+    }
+    proximamente();
+</script>
