@@ -77,22 +77,6 @@ function videoPlay () {
         }    
     });
 }
-function btnMainInfo() {
-    // Botones INFO
-    const btnMainInfoOn = document.getElementById('btnInfoOn');
-    const btnMainInfoOff = document.getElementById('btnInfoOff');
-    
-    btnMainInfoOn.addEventListener('click', ()=>{
-        setTimeout(()=>{
-            $('#mainInfo').fadeToggle('slow');
-        }, 200);
-    });
-    btnMainInfoOff.addEventListener('click', ()=>{
-        setTimeout(()=>{
-            $('#mainInfo').fadeToggle('slow');
-        }, 200);
-    });
-}
+
 
 videoPlay();
-btnMainInfo();

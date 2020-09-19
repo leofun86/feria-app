@@ -11,4 +11,10 @@ function pagVerMas() {
     });
 }
 
+function otrosPaseoFeria() {
+    const cajaOtros = document.getElementById('otrosPaseoFeria');
+    $(cajaOtros).load('./paginas/paseoFeria/otrosPaseoFeria.html');
+}
+
 pagVerMas();
+otrosPaseoFeria();

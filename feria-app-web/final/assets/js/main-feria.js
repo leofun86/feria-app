@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     cajasMenu()
     cargaSubmenu();
     scrollFooter();
+    btnMainInfo();
 })
 
 function cargaSubmenu() {
@@ -82,10 +83,10 @@ function cargaMenu() {
             cajaPaginas.style.background='white';
             switch (btn.textContent) {
                 case "INICIO":
-                    $(cajaPaginas).load('main.html');
+                    $(cajaPaginas).load('./paginas/main.html');
                 break;
                 case "CÓMO LLEGAR":
-                    $(cajaPaginas).load('como_llegar.html');
+                    $(cajaPaginas).load('./paginas/como_llegar.html');
                 break;
                 case "QUIENES SOMOS":
                 break;
@@ -109,7 +110,7 @@ function cargaMenu() {
                 case "Frutas y Verduras":
                 break;
                 case "Comida de paso":
-                    $(cajaPaginas).load('./paginas/comida_paso.html');
+                    $(cajaPaginas).load('./paginas/paseoFeria/comida_paso.html');
                 break;
                 case "Artistas callejeros":
                 break;
@@ -149,5 +150,22 @@ function cajasMenu() {
     menuCaja2.addEventListener('mouseleave', ()=>{
         const videoCaja1 = document.querySelector('#menu-caja-2 video');
         videoCaja1.pause();
+    });
+}
+
+function btnMainInfo() {
+    // Botones INFO
+    const btnMainInfoOn = document.getElementById('btnInfo');
+    const btnMainInfoOff = document.getElementById('btnInfoOff');
+    
+    btnMainInfoOn.addEventListener('click', ()=>{
+        setTimeout(()=>{
+            $('#mainInfo').fadeToggle('slow');
+        }, 200);
+    });
+    btnMainInfoOff.addEventListener('click', ()=>{
+        setTimeout(()=>{
+            $('#mainInfo').fadeToggle('slow');
+        }, 200);
     });
 }

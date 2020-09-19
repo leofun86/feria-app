@@ -1,0 +1,36 @@
+/* CÓMO LLEGAR */
+#mainComoLlegar h1 {
+    font-size:2rem;
+    font-weight:900;
+  }
+  #mainComoLlegar h2 {
+    font-size:2rem;
+    font-weight:600;
+    color:rgb(28, 56, 114);
+  }
+  #mainComoLlegar i {
+    font-size:1.5rem;
+  }
+  #mainComoLlegar h2 > span {
+    position:relative;
+    left:0px;
+  }
+  #mainComoLlegar h2 > span > i {
+    font-size:1.2rem;
+    font-weight:600;
+    color:rgb(255, 72, 0);
+    position:relative;
+    left:0px;
+  }
+  #mainComoLlegar span {
+    font-size:1rem;
+    font-weight: normal;
+  }
+  #mainComoLlegar h2, #mainComoLlegar span {
+    position:relative;
+    left:20px;
+  }
+  #mainComoLlegar hr {
+    border:1px solid #bbb;
+    margin:20px 0px;
+  }

@@ -1,0 +1,52 @@
+/* PASEO DE LA FERIA */
+.pagsPaseoFeria h1 {
+    font-family:'atlantic_cruise';
+  }
+  #otrosPaseoFeria div > div {
+    overflow:hidden;
+    height:90px;
+    background-color:#666;
+  }
+  #otrosPaseoFeria div div > div {
+    z-index:2222;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background-color:rgba(80, 80, 80, 0.4);
+  }
+  #otrosPaseoFeria a {
+    color:white;
+    font-size:1.1rem;
+    font-weight:800;
+    text-shadow: 2px 2px 4px #222;
+  }
+  #otrosPaseoFeria video {
+    z-index:1!important;
+    position: absolute;
+    top: 10%; 
+    left: 10%;
+    -webkit-transform: translateX(-30%) translateY(-50%);
+    transform: translateX(-30%) translateY(-50%);
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto;
+    scale:0.8;
+  }
+  #otrosPaseoFeria p {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    padding:0px;
+    margin:0px;
+    color:white;
+    font-size:2rem;
+    z-index:222!important;
+  }

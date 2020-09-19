@@ -1,0 +1,11 @@
+/* PRONÓSTICO */
+#pronostico {
+    display:inline-block;
+    position:absolute;
+    right:-70%;
+    z-index:222!important;
+  }
+  #cont_538875467e9b3c1b462f496eef1c6563 {
+    background:transparent!important;
+    border:none!important;
+  }

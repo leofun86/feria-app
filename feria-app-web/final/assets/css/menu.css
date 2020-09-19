@@ -1,0 +1,125 @@
+/* MENU */
+.navbar-toggler {
+    color:rgba(0, 0, 0, 1);
+    border-color:none!important;
+  }
+  #cajaMenuVer h4 {
+    font-family:'arial'!important;
+  }
+  .titulo-caja-menu {
+    background-color:rgba(0,0,0,0.3);
+    font-family:'atlantic_cruise'!important;
+    font-size:2rem;
+  }
+  #cajaMenuVer h5, #cajaMenuVer li {
+    position:relative;
+    left:0px;
+    transition:0.3s;
+    line-height:1rem;
+  }
+  #cajaMenuVer li a {
+    font-size:1.2rem;
+    line-height: 25px;
+  } 
+  #cajaMenuVer h5::before, #cajaMenuVer li::before {
+    content:'■';
+    font-size:1.6rem;
+    margin-right:5px;
+    cursor:pointer;
+    color:rgba(255, 255, 255, 0.5);
+  }
+  #cajaMenuVer h5:hover, #cajaMenuVer li:hover {
+    left:4px;
+  }
+  #cajaMenuVer ul {
+    padding-left:0px;
+    list-style:none;
+  }
+  #menu-caja-1, #menu-caja-2, #menu-caja-3 {
+    overflow:hidden;
+  }
+  #menu-caja-1 video, #menu-caja-2 video, #menu-caja-3 video {
+    z-index:-2;
+    position: absolute;
+    top: 10%; 
+    left: 10%;
+    -webkit-transform: translateX(-30%) translateY(-50%);
+    transform: translateX(-30%) translateY(-50%);
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto;
+    scale:0.8;
+  }
+  #menu-caja-2 video {
+    -webkit-transform: translateX(-30%) translateY(-20%);
+    transform: translateX(-30%) translateY(-20%);
+  }
+  #menu-caja-2 ul {
+    margin-left:25px;
+  }
+  #menu-caja-1 {
+    background-image:url('./../img/menu/menu_links_principales.jpg');background-size:cover;
+  }
+  #menu-caja-2 {
+    background-image:url('./../img/menu/menu_paseo_feria.jpg');background-size:cover;
+  }
+  #menu-caja-3 {
+    background-image:url('./../img/menu/menu_wiki_feria.jpg');background-size:cover;
+  }
+  .links a {
+    box-shadow: 2px 2px 4px #444!important;
+  }
+  /* SUBMENU */
+  #btnSubMenu {
+    cursor:pointer;
+  }
+  #cajaSubMenu {
+    display:inline-block;
+    background:#777;
+    padding:8px 10px;
+    border-radius:5px;
+  }
+  #cajaSubMenu i {
+    font-size:1.8rem;
+    margin:0px 5px;
+    color:#eee;
+    cursor:pointer;
+  }
+  .cajaSubMenuIn {
+    position:relative;
+    left:5px;
+    animation: cajaSubIn 0.5s forwards; 
+  }
+  @keyframes cajaSubIn {
+    0% {left:5px;}
+    100% {left:20px;}
+  }
+  .cajaSubMenuOut {
+    position:relative;
+    left:20px;
+    animation: cajaSubOut 0.5s forwards; 
+  }
+  @keyframes cajaSubOut {
+    0% {left:20px;}
+    100% {left:5px;}
+  }
+  .subRotateIn {
+    transform:rotate(0deg);
+    animation: rotateIn 0.5s forwards;
+  }
+  @keyframes rotateIn {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(540deg);}
+  }
+  .subRotateOut {
+    transform:rotate(360deg);
+    animation: rotateOut 0.5s forwards;
+  }
+  @keyframes rotateOut {
+    0% {transform:rotate(540deg);}
+    100% {transform:rotate(0deg);}
+  }
+  #mainInfo {
+    
+  }
