@@ -455,7 +455,7 @@ section {
 #menu-caja-1, #menu-caja-2, #menu-caja-3 {
   overflow:hidden;
 }
-#menu-caja-1 video, #menu-caja-2 video {
+#menu-caja-1 video, #menu-caja-2 video, #menu-caja-3 video {
   z-index:-2;
   position: absolute;
   top: 10%; 
@@ -472,17 +472,63 @@ section {
   -webkit-transform: translateX(-30%) translateY(-20%);
   transform: translateX(-30%) translateY(-20%);
 }
-#menu-caja-2 a {
-  width:25%;
-  padding:20px 0px;
-  background:#222;
-  display:inline-block;
-  margin:2px;
-  border-radius:5px;
+#menu-caja-2 ul {
+  margin-left:25px;
 }
 .links a {
   box-shadow: 2px 2px 4px #444!important;
 }
+/* SUBMENU */
+#btnSubMenu {
+  
+}
+#cajaSubMenu {
+  display:inline-block;
+  background:#777;
+  padding:8px 10px;
+  border-radius:5px;
+}
+#cajaSubMenu i {
+  font-size:1.8rem;
+  margin:0px 5px;
+  color:#eee;
+  cursor:pointer;
+}
+.cajaSubMenuIn {
+  position:relative;
+  left:5px;
+  animation: cajaSubIn 0.5s forwards; 
+}
+@keyframes cajaSubIn {
+  0% {left:5px;}
+  100% {left:20px;}
+}
+.cajaSubMenuOut {
+  position:relative;
+  left:20px;
+  animation: cajaSubOut 0.5s forwards; 
+}
+@keyframes cajaSubOut {
+  0% {left:20px;}
+  100% {left:5px;}
+}
+.subRotateIn {
+  transform:rotate(0deg);
+  animation: rotateIn 0.5s forwards;
+}
+@keyframes rotateIn {
+  0% {transform:rotate(0deg);}
+  100% {transform:rotate(540deg);}
+}
+.subRotateOut {
+  transform:rotate(360deg);
+  animation: rotateOut 0.5s forwards;
+}
+@keyframes rotateOut {
+  0% {transform:rotate(540deg);}
+  100% {transform:rotate(0deg);}
+}
+
 .category .links-wrap .toggle .fa:before{content:'\f104'}
 .category.active .links-wrap .toggle .fa:before{content:'\f105'}
 
@@ -708,6 +754,22 @@ section {
 #mainComoLlegar hr {
   border:1px solid #bbb;
   margin:20px 0px;
+}
+/* PASEO DE LA FERIA */
+.pagsPaseoFeria h1 {
+  font-family:'atlantic_cruise';
+}
+
+/* PRONÓSTICO */
+#pronostico {
+  display:inline-block;
+  position:absolute;
+  right:-70%;
+  z-index:222!important;
+}
+#cont_538875467e9b3c1b462f496eef1c6563 {
+  background:transparent!important;
+  border:none!important;
 }
 
 @media screen and (max-width:900px) {

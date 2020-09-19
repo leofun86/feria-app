@@ -1,43 +1,57 @@
 <div class="pos-f-t">
-    <div class="collapse" id="navbarToggleExternalContent">
+    <div class="collapse" id="cajaMainMenu">
       <div class="container-fluid" id="cajaMenuVer">
         <div class="row">
-          <div id="menu-caja-1" class="col-4 text-white p-0">
+          <div id="menu-caja-1" class="col-12 col-lg-4 text-white p-0">
             <div style="z-index:-1;position:absolute;width:100%;height:100%;top:0px;left:0px;background-color:rgba(112, 68, 43, 0.6);"></div>
             <video muted pause loop>
               <source src="./assets/video/menu_caja_1.m4v">
             </video>
             <p class="titulo-caja-menu py-1 text-center">Menu</p>
-            <div class="px-5">
+            <div class="px-4">
               <h5 id="btnInicio"><a href="#">INICIO</a></h5>
               <h5 id="btnComoLlegar"><a href="#">CÓMO LLEGAR</a></h5>
               <h5 id="btnQuienesSomos"><a href="#">QUIENES SOMOS</a></h5>
               <h5 id="btnContacto"><a href="#">CONTACTO</a></h5>
             </div>
           </div>
-          <div id="menu-caja-2" class="col-8 text-center text-white p-0">
+          <div id="menu-caja-2" class="col-12 col-lg-4 text-white p-0">
             <div style="z-index:-1;position:absolute;width:100%;height:100%;top:0px;left:0px;background-color:rgba(43, 73, 112, 0.6);"></div>
             <video muted loop pause>
               <source src="./assets/video/menu_caja_2.m4v">
             </video>
             <p class="titulo-caja-menu py-1 text-center">Paseo de la Feria</p>
-          
-              <div class="px-3 pb-3" style="color:#444;">
-                <a href="#">
-                  Librería
-                </a>
-                <a href="#">
-                  Mercado de Pulgas
-                </a>
-                <a href="#">
-                  Frutas y Verduras
-                </a>
-                <a href="#">
-                  Comida de paso
-                </a>
-                <a href="#">
-                  Artistas callejeros
-                </a>
+              <ul>
+                <li>
+                  <a href="#">Librería</a>
+                </li>
+                <li>
+                  <a href="#">Mercado de Pulgas</a>
+                </li>
+                <li>
+                  <a href="#">Frutas y Verduras</a>
+                </li>
+                <li>
+                  <a href="#">Comida de paso</a>
+                </li>
+                <li>
+                  <a href="#">Artistas callejeros</a>
+                </li>
+              </ul>
+          </div>
+          <div id="menu-caja-3" class="col-12 col-lg-4 text-center text-white p-0">
+            <div style="z-index:-1;position:absolute;width:100%;height:100%;top:0px;left:0px;background-color:rgba(61, 60, 59, 0.6);"></div>
+            <img src="./assets/img/backCajaMenu3.jpg" style="position:absolute;left:0px;top:0px;width:100%;scale:1.3;z-index:-2;" alt="">
+            <!--
+              <video muted loop pause>
+                <source src="./assets/video/menu_caja_2.m4v">
+              </video>
+            -->
+            <p class="titulo-caja-menu py-1 text-center">Wiki Feria</p>
+              <div style="color:#444;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                <h4 class="text-white mt-4">
+                  ¡Proximamente!
+                </h4>
               </div>
               <!--
                 <h5>Gastronomía</h5>
@@ -51,35 +65,30 @@
                   <li><a href="#">Artistas callejeros</a></li>
                 </ul>
               -->
-            
-          </div>
-          <!--
-            <div id="menu-caja-3" class="col-4 text-white p-0">
-            <video muted pause>
-              <source src="./assets/video/main.m4v">
-            </video>
-            <p class="titulo-caja-menu py-1 text-center">Wiki-Feria</p>
-            <div class="px-5">
-              <h5>Sección 1</h5>
-              <ul>
-                <li><a href="./origen_feria.html" target="contenedor_páginas">Origen de la feria</a></li>
-                <li><a href="#">Subsección 1-2</a></li>
-              </ul>
-              <h5>Sección 2</h5>
-              <ul>
-                <li><a href="#">Subsección 2-1</a></li>
-                <li><a href="#">Subsección 2-2</a></li>
-              </ul>
-            </div>
-          -->
           </div>
         </div>
       </div>
     </div>
-    <nav class="navbar navbar-dark" style="border-bottom:1px solid #ccc;justify-content:left!important;z-index:2222;background:white;">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" style="outline:none;">
+    <nav class="navbar navbar-dark" style="overflow:hidden; border-bottom:1px solid #ccc;justify-content:left!important;z-index:2222;background:white;">
+      <button id="btnHamburguesa" class="navbar-toggler" type="button" style="outline:none;">
         <i class="fas fa-bars" style="color:black;font-size:2rem;"></i>
       </button>
       <img src="./assets/img/logo_navbar.png" style="margin-left:15px;width:8rem;" alt="">
+      <i class="fas fa-chevron-circle-right ml-2" id="btnSubMenu" style="font-size:1.5rem;color:#644d3f;"></i>
+      <div id="cajaSubMenu" style="display:none;" class="claseMuerta">
+        <i id="btnGaleria" class="fas fa-camera-retro"></i>
+        <i id="btnTiempo" class="fas fa-cloud-sun-rain"></i>
+      </div>
+      <!-- PRONÓSTICO -->
+      <div id="cajaTiempo" style="scale:1.4;position:absolute;right:25px;top:-10px;width:140px;height:90px!important;overflow:hidden;text-align:center;padding-top:20px;z-index:2222!important;display:block;">
+        <div style="width:100%;height:100%;position:absolute;"></div>
+        <div style="display:inline-block;position:relative;right:140px;bottom:10px;">
+          <div id="cont_538875467e9b3c1b462f496eef1c6563">
+            <button style="font-family:arial;font-size:0.9rem;font-weight:600;position:absolute;z-index:222;color:#666;border:none;outline:none;">X</button>
+            <script type="text/javascript" async src="https://www.tiempo.com/wid_loader/538875467e9b3c1b462f496eef1c6563"></script>
+          </div>
+        </div>
+      </div>
     </nav>
+  
   </div>

@@ -46,14 +46,14 @@
 <body style="background-image: url('./assets/img/mainIndex.jpg');background-size: cover;">    
   
   <?php include 'menu.html' ?>
-
+  
   <div id="cajaPaginas" style="width:100%;height:100%;display:block;">
-    <?php include './como_llegar.html'; ?>
+    <?php include './main.html'; ?>
   </div>
   
   <!-- FOOTER -->
   
-  <footer class="text-center text-dark py-2 w-100" style="background-color:white;width:100%;">
+  <footer class="text-center text-dark py-2 w-100" style="background-color:white;width:100%;border-top:1px solid #aaa;">
   </div>
     <div style="font-size:0.8vw;">
         <div style="display:inline-block;">

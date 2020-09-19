@@ -10,33 +10,112 @@ const menuCaja2 = document.getElementById('menu-caja-2');
 const menuCaja3 = document.getElementById('menu-caja-3');
 
 // MENU
+const btnHamburguesa = document.getElementById('btnHamburguesa');
 const btnInicio = document.getElementById('btnInicio');
 const btnComoLlegar = document.getElementById('btnComoLlegar');
+const btnQuienesSomos = document.getElementById('btnQuienesSomos');
+const btnContacto = document.getElementById('btnContacto');
+const cajaMainMenu = document.getElementById('cajaMainMenu');
+const botonesCaja1 = document.querySelectorAll('#menu-caja-1 h5');
+const botonesCaja2 = document.querySelectorAll('#menu-caja-2 a');
+    // SUBMENU
+    const btnTiempo = document.getElementById('btnTiempo');
+    const cajaTiempo = document.getElementById('cajaTiempo');
 
+// PÁGINAS
 const cajaPaginas = document.getElementById('cajaPaginas');
 
 document.addEventListener('DOMContentLoaded', ()=>{
     cargaMenu();
     cajasMenu()
+    cargaSubmenu();
     scrollFooter();
 })
 
-function cargaMenu() {
-    btnInicio.addEventListener('click', (e)=>{
-        e.preventDefault();
-        cajaPaginas.innerHTML="";
-        cajaPaginas.style.width="100%";
-        cajaPaginas.style.height="100%";
-        cajaPaginas.style.background='white';
-        $(cajaPaginas).load('main.html');
+function cargaSubmenu() {
+    const btnCerrarTiempo = cajaTiempo.querySelector('button');
+    const btnSub = document.getElementById('btnSubMenu');
+    const cajaSubMenu = document.getElementById('cajaSubMenu');
+
+    btnSub.addEventListener('click', ()=>{
+        btnSub.classList.forEach(item => {
+            if (item == "subRotateIn") {
+                btnSub.classList.remove('subRotateIn');
+                btnSub.classList.add('subRotateOut');
+            } else if (item == "subRotateOut") {
+                btnSub.classList.remove('subRotateOut');
+                btnSub.classList.add('subRotateIn');
+            } else {
+                btnSub.classList.add('subRotateIn');
+            }
+        });
+        cajaSubMenu.classList.forEach(item=>{
+            if (item == "cajaSubMenuIn") {
+                cajaSubMenu.classList.remove('cajaSubMenuIn');
+                cajaSubMenu.classList.add('cajaSubMenuOut');
+            } else if (item == "cajaSubMenuOut") {
+                cajaSubMenu.classList.remove('cajaSubMenuOut');
+                cajaSubMenu.classList.add('cajaSubMenuIn');
+            } else {
+                cajaSubMenu.classList.add('cajaSubMenuIn');
+            }
+        });
+        $(cajaSubMenu).fadeToggle();
     });
-    btnComoLlegar.addEventListener('click', (e)=>{
-        e.preventDefault();
-        cajaPaginas.innerHTML="";
-        cajaPaginas.style.width="100%";
-        cajaPaginas.style.height="100%";
-        cajaPaginas.style.background='white';
-        $(cajaPaginas).load('como_llegar.html');
+    btnTiempo.addEventListener('click', ()=>{
+        $(cajaTiempo).fadeToggle();
+    });
+    btnCerrarTiempo.addEventListener('click', ()=>{
+        $(cajaTiempo).fadeToggle();    
+    });
+}
+
+function cargaMenu() {
+    btnHamburguesa.addEventListener('click', ()=>{
+        $(cajaMainMenu).slideToggle();
+    });
+    botonesCaja1.forEach(btn => {
+        btn.addEventListener('click', ()=>{
+            cajaPaginas.innerHTML="";
+            cajaPaginas.style.width="100%";
+            cajaPaginas.style.height="100%";
+            cajaPaginas.style.background='white';
+            switch (btn.textContent) {
+                case "INICIO":
+                    $(cajaPaginas).load('main.html');
+                break;
+                case "CÓMO LLEGAR":
+                    $(cajaPaginas).load('como_llegar.html');
+                break;
+                case "QUIENES SOMOS":
+                break;
+                case "CONTACTO":
+                break;
+            }
+            $(cajaMainMenu).slideToggle();
+        })
+    });
+    botonesCaja2.forEach(btn => {
+        btn.addEventListener('click', ()=>{
+            cajaPaginas.innerHTML="";
+            cajaPaginas.style.width="100%";
+            cajaPaginas.style.height="100%";
+            cajaPaginas.style.background='white';
+            switch (btn.textContent) {
+                case "Librería":
+                break;
+                case "Mercado de Pulgas":
+                break;
+                case "Frutas y Verduras":
+                break;
+                case "Comida de paso":
+                    $(cajaPaginas).load('./paginas/comida_paso.html');
+                break;
+                case "Artistas callejeros":
+                break;
+            }
+            $(cajaMainMenu).slideToggle();
+        })
     });
 }
 
