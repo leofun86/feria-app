@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
 })
 
 function cargaSubmenu() {
-    const btnCerrarTiempo = cajaTiempo.querySelector('button');
     const btnSub = document.getElementById('btnSubMenu');
     const cajaSubMenu = document.getElementById('cajaSubMenu');
+    const tituloTiempo = document.getElementById('tituloTiempo');
 
     btnSub.addEventListener('click', ()=>{
         btnSub.classList.forEach(item => {
@@ -64,10 +64,8 @@ function cargaSubmenu() {
         $(cajaSubMenu).fadeToggle();
     });
     btnTiempo.addEventListener('click', ()=>{
-        $(cajaTiempo).fadeToggle();
-    });
-    btnCerrarTiempo.addEventListener('click', ()=>{
-        $(cajaTiempo).fadeToggle();    
+        $(cajaTiempo).slideToggle();
+        $(tituloTiempo).slideToggle();
     });
 }
 
