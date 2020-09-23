@@ -103,7 +103,7 @@ function cargaMenu() {
             cajaPaginas.style.height="100%";
             cajaPaginas.style.background='white';
             switch (btn.textContent) {
-                case "Librería":
+                case "Librerías":
                     $(cajaPaginas).load('./paginas/proximamente.html');
                 break;
                 case "Mercado de Pulgas":
@@ -112,7 +112,7 @@ function cargaMenu() {
                 case "Frutas y Verduras":
                     $(cajaPaginas).load('./paginas/proximamente.html');
                 break;
-                case "Comida de paso":
+                case "Comidas de paso":
                     $(cajaPaginas).load('./paginas/paseoFeria/comida_paso.html');
                 break;
                 case "Artistas callejeros":

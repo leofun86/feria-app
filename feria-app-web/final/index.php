@@ -13,7 +13,7 @@
   ?>
   
   <div id="cajaPaginas" style="width:100%;height:100%;display:block;">
-    <?php include './paginas/paseoFeria/comida_paso.html'; ?>
+    <?php include './paginas/main.html'; ?>
   </div>
   
   <?php include 'footer.html'; ?>
